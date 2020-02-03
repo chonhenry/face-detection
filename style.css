@@ -80,15 +80,15 @@ button {
 }
 
 #detect_img {
-  width: 500px;
+  width: 700px;
   height: auto;
 }
 
-#box {
-  border: 1px solid white;
-  width: 200px;
-  height: 200px;
-  top: 0;
-  left: 0;
+.box {
   position: absolute;
+  box-shadow: 0 0 0 3px #149df2 inset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
 }
