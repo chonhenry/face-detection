@@ -85,3 +85,8 @@ let updateImg = e => {
 
 // --------------------Event Listeners--------------------
 btn.addEventListener("click", updateImg);
+img_link.addEventListener("keypress", e => {
+  if (event.which == 13 || event.keyCode == 13) {
+    updateImg();
+  }
+});

@@ -260,10 +260,6 @@ let updateImg = e => {
         bottomEdge = img_height - boxEdge.bottom_row[i] * img_height;
         leftEdge = img_width * boxEdge.left_col[i];
         rightEdge = img_width - boxEdge.right_col[i] * img_width;
-        // console.log(boxEdge.top_row[i] * img_height);
-        // console.log(img_height - boxEdge.bottom_row[i] * img_height);
-        // console.log(img_width * boxEdge.left_col[i]);
-        // console.log(img_width - boxEdge.right_col[i] * img_width);
 
         box_to_add.style = `top: ${topEdge}px; right: ${rightEdge}px; bottom: ${bottomEdge}px; left: ${leftEdge}px;`;
         face_detection.appendChild(box_to_add);
@@ -276,6 +272,11 @@ let updateImg = e => {
 
 // --------------------Event Listeners--------------------
 btn.addEventListener("click", updateImg);
+img_link.addEventListener("keypress", e => {
+  if (event.which == 13 || event.keyCode == 13) {
+    updateImg();
+  }
+});
 
 },{"clarifai":45}],3:[function(require,module,exports){
 "use strict";
